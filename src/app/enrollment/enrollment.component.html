@@ -1,0 +1,24 @@
+<app-titlebar></app-titlebar>
+<div class="container-fluid" style="margin-top: 15px">
+
+  <div class="form-control" style="min-height: 899px">
+    <div class="alert alert-info" role="alert">
+      <h3>Enrolled Students</h3>
+    </div>
+
+    <div class="row container-fluid">
+      <div *ngFor="let enrollment of enrollments" class="col-sm-6">
+        <div class="card" style="width: 18rem; margin: 15px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+          <div class="card-body" >
+            <h5 class="card-title">username: {{enrollment.student.username}}</h5>
+            <p class="card-text">firstname: {{enrollment.student.firstName}}</p>
+            <p class="card-text">lastname: {{enrollment.student.lastName}}</p>
+            <p class="card-text">grade: 75</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>

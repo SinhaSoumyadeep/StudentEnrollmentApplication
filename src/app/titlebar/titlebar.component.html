@@ -1,0 +1,46 @@
+<div class="titleBar">
+
+  <span class="title"><a style="text-decoration: none; color: white" href="/home"><i class="fa fa-home" aria-hidden="true" ></i></a>&nbsp;&nbsp;White Board</span>
+  <span class="btnGrp">
+
+     <button type="button" class="btn btn-warning" style="border-radius: 95px"data-toggle="modal" data-target="#exampleModal" [hidden]=isLoggedIn>
+    Login
+  </button>
+   <button type="button" class="btn btn-warning" style="border-radius: 95px"data-toggle="modal" data-target="#RegisterModal" [hidden]=isLoggedIn>
+    Register
+  </button>
+   <a class="btn btn-warning" style="border-radius: 95px" routerLink="/profile" [hidden]=!isLoggedIn>Profile</a>
+   </span>
+
+</div>
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" style="height: 245px">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <app-login></app-login>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="RegisterModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content" style="height: 259px">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <app-register></app-register>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<app-titlebar></app-titlebar>
+<div class="container-fluid">
+  <div class="alert alert-info" role="alert">
+    <h3>Section Editor</h3>
+  </div>
+
+  <input [(ngModel)]="section.name"
+         placeholder="name"
+         class="form-control"/>
+  <input [(ngModel)]="section.seats"
+         placeholder="seats"
+         class="form-control"/>
+  <button (click)="updateSection(section)"
+          class="btn btn-primary btn-block">
+    Update
+  </button>
+</div>

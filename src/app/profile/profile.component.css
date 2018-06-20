@@ -1,0 +1,19 @@
+.titleBar
+{
+  height: 69px;
+  background-color: black;
+
+}
+
+.btnGrp
+{
+  float: right;
+  margin: 15px;
+}
+
+.title
+{
+  margin-left: 25px;
+  color: white;
+  font-size: 45px;
+}

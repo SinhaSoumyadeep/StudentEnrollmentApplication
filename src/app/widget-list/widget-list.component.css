@@ -1,0 +1,16 @@
+.WidgetContainer
+{
+  padding-top: 43px;
+  width: 774px;
+  height: 263px;
+  margin: 28px;
+  border: 1px solid #ababab;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.widgetPadding
+{
+  height: 158px;
+}
+

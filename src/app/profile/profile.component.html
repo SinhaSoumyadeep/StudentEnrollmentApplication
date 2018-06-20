@@ -1,0 +1,65 @@
+<div class="container-fluid">
+  <div class="titleBar">
+
+    <span class="title"><a style="text-decoration: none; color: white" href="/home"><i class="fa fa-home" aria-hidden="true" ></i></a>&nbsp;&nbsp;White Board</span>
+    <span class="btnGrp">
+      <div *ngIf="!(user.username == 'admin')">
+        <a class="btn btn-warning" style="border-radius: 95px" routerLink="/home">Home</a>
+      </div>
+      <div *ngIf="(user.username == 'admin')">
+        <a class="btn btn-warning" style="border-radius: 95px" routerLink="/admin">Admin</a>
+      </div>
+
+
+   </span>
+
+  </div>
+  <div class="alert alert-info" role="alert">
+    <h3>Profile</h3>
+  </div>
+
+  <div  style="margin: auto">
+
+
+
+
+  <input [(ngModel)]="user.username"
+         placeholder="username"
+         class="form-control"/>
+  <input [(ngModel)]="user.firstName"
+         placeholder="first name"
+         class="form-control"/>
+  <input [(ngModel)]="user.lastName"
+         placeholder="lastName"
+         class="form-control"/>
+  <input [(ngModel)]="user.email"
+         placeholder="email"
+         class="form-control"/>
+    <input [(ngModel)]="user.phone"
+           placeholder="phone"
+           class="form-control"/>
+    <input [(ngModel)]="user.address"
+           placeholder="Address"
+           class="form-control"/>
+  <button (click)="update(user)"
+          class="btn btn-primary btn-block">
+    Update
+  </button>
+
+  <button (click)="logout()"
+          class="btn btn-danger btn-block">
+    logout
+  </button>
+
+  </div>
+
+
+  <br/>
+  <br/>
+
+  <div *ngIf="!(user.username == 'admin')">
+    <app-enrolled-section></app-enrolled-section>
+  </div>
+
+
+</div>

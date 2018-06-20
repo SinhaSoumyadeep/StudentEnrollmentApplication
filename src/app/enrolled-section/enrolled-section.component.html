@@ -1,0 +1,22 @@
+<div  *ngIf="!(user.username == 'admin')" class="form-control" style="min-height: 575px">
+  <div class="alert alert-info" role="alert">
+    <h3>Courses Registered</h3>
+  </div>
+
+  <div class="row container-fluid">
+    <div *ngFor="let section of sections" class="col-sm-6">
+      <div class="card" style="width: 18rem; margin: 15px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+        <div class="card-body" >
+          <h5 class="card-title">{{section.course.title}}</h5>
+          <h5 class="card-title">{{section.section.name}}</h5>
+          <p class="card-text">number of seats available: {{section.section.seats}}</p>
+          <button class="btn btn-warning" (click)="unenroll(section.section._id)" >Unenroll</button>
+          <a class="btn btn-success" href="/course/{{section.course.id}}/section" >Section</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div style="height: 15px">
+
+</div>
