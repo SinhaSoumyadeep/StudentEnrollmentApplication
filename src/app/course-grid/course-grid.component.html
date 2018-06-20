@@ -1,6 +1,6 @@
 <div style="margin: 23px">
   <img [hidden]=!isLoggedIn src="https://mbevivino.files.wordpress.com/2011/08/silhouette_orange.jpg" style="border-radius: 99px; " height="44px" width="49px">
-  <h5 [hidden]=!isLoggedIn>Hello, Welcome to WhiteBoard !! </h5>
+  <h5 [hidden]=!isLoggedIn>Hello {{user.username}}, Welcome to WhiteBoard !! </h5>
 </div>
 <div >
   <app-enrolled-section ></app-enrolled-section>
