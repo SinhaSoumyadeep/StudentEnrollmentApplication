@@ -3,6 +3,7 @@ import {ActivatedRoute} from "@angular/router";
 import {ModuleServiceClient} from "../services/module.service.client";
 import {UserServiceClient} from "../services/user.service.client";
 import {CourseServiceClient} from "../services/course.service.client";
+import {Course} from '../models/coruse.model.client';
 
 
 @Component({
@@ -18,7 +19,7 @@ export class SectionComponent implements OnInit {
 
   sections = [
   ];
-  course = {}
+  course = Course = new Course();
 
   courseId;
   user: '';
