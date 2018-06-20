@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {CourseServiceClient} from "../services/course.service.client";
 import {Course} from "../models/coruse.model.client";
+import {User} from '../models/user.model.client';
 
 @Component({
   selector: 'app-course-grid',
@@ -12,7 +13,7 @@ export class CourseGridComponent implements OnInit {
   constructor(private service: CourseServiceClient) { }
 
   courses: Course[] = [];
-  user: {};
+  user: User = new User();
   isLoggedIn;
 
   ngOnInit() {
