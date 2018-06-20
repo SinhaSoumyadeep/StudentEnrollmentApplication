@@ -19,7 +19,7 @@ export class SectionComponent implements OnInit {
 
   sections = [
   ];
-  course = Course = new Course();
+  course: Course = new Course();
 
   courseId;
   user: '';
