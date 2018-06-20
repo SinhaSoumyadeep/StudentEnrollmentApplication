@@ -1,12 +1,12 @@
 export class UserServiceClient {
 
   findUserById(userId) {
-    return fetch('http://localhost:4000/api/user/' + userId)
+    return fetch('https://enigmatic-basin-76680.herokuapp.com/api/user/' + userId)
       .then(response => response.json());
   }
 
   profile() {
-    return fetch('http://localhost:4000/api/profile',
+    return fetch('https://enigmatic-basin-76680.herokuapp.com/api/profile',
       {
         credentials: 'include', // include, same-origin, *omit
       })
@@ -19,7 +19,7 @@ export class UserServiceClient {
       username: username,
       password: password
     };
-    return fetch('http://localhost:4000/api/login',
+    return fetch('https://enigmatic-basin-76680.herokuapp.com/api/login',
       {
         body: JSON.stringify(credentials),
         credentials: 'include', // include, same-origin, *omit
@@ -33,7 +33,7 @@ export class UserServiceClient {
 
   logout()
   {
-    return fetch('http://localhost:4000/api/logout',
+    return fetch('https://enigmatic-basin-76680.herokuapp.com/api/logout',
       {
         credentials: 'include', // include, same-origin, *omit
         method: 'post',
@@ -49,7 +49,7 @@ export class UserServiceClient {
       username: username,
       password: password
     };
-    return fetch('http://localhost:4000/api/user', {
+    return fetch('https://enigmatic-basin-76680.herokuapp.com/api/user', {
       body: JSON.stringify(user),
       credentials: 'include', // include, same-origin, *omit
       method: 'post',
@@ -66,7 +66,7 @@ export class UserServiceClient {
       seats: seats,
       courseId: courseId
     };
-    return fetch('http://localhost:4000/api/course/'+ courseId +'/section', {
+    return fetch('https://enigmatic-basin-76680.herokuapp.com/api/course/'+ courseId +'/section', {
       body: JSON.stringify(section),
       credentials: 'include', // include, same-origin, *omit
       method: 'post',
@@ -80,7 +80,7 @@ export class UserServiceClient {
 
   findSectionsForCourse(courseId)
   {
-    return fetch('http://localhost:4000/api/course/'+ courseId +'/section',
+    return fetch('https://enigmatic-basin-76680.herokuapp.com/api/course/'+ courseId +'/section',
       {
         credentials: 'include', // include, same-origin, *omit
       })
@@ -90,7 +90,7 @@ export class UserServiceClient {
   enrollStudentInSection(sectionId)
   {
 
-    return fetch('http://localhost:4000/api/section/'+ sectionId +'/enrollment', {
+    return fetch('https://enigmatic-basin-76680.herokuapp.com/api/section/'+ sectionId +'/enrollment', {
       credentials: 'include', // include, same-origin, *omit
     })
       .then( response => response.json());
@@ -99,7 +99,7 @@ export class UserServiceClient {
   unenrollStudentInSection(sectionId)
   {
 
-    return fetch('http://localhost:4000/api/section/'+ sectionId +'/unenrollment', {
+    return fetch('https://enigmatic-basin-76680.herokuapp.com/api/section/'+ sectionId +'/unenrollment', {
       credentials: 'include', // include, same-origin, *omit
     })
       .then( (response) => {response.json()});
@@ -108,7 +108,7 @@ export class UserServiceClient {
 
   findSectionsForStudent()
   {
-    return fetch('http://localhost:4000/api/student/section',
+    return fetch('https://enigmatic-basin-76680.herokuapp.com/api/student/section',
       {
         credentials: 'include', // include, same-origin, *omit
       })
@@ -117,7 +117,7 @@ export class UserServiceClient {
 
   findEnrollmentForSection(sectionId)
   {
-    return fetch('http://localhost:4000/api/section/'+sectionId+'/findenrollment',
+    return fetch('https://enigmatic-basin-76680.herokuapp.com/api/section/'+sectionId+'/findenrollment',
       {
         credentials: 'include', // include, same-origin, *omit
       })
@@ -129,7 +129,7 @@ export class UserServiceClient {
   updateUser(user) {
 
     console.log(user)
-    return fetch('http://localhost:4000/api/updateuser', {
+    return fetch('https://enigmatic-basin-76680.herokuapp.com/api/updateuser', {
       body: JSON.stringify(user),
       credentials: 'include', // include, same-origin, *omit
       method: 'put',
@@ -141,7 +141,7 @@ export class UserServiceClient {
 
   updateSection(section){
     console.log(section)
-    return fetch('http://localhost:4000/api/updatesection', {
+    return fetch('https://enigmatic-basin-76680.herokuapp.com/api/updatesection', {
       body: JSON.stringify(section),
       credentials: 'include', // include, same-origin, *omit
       method: 'put',
@@ -154,7 +154,7 @@ export class UserServiceClient {
 
   deleteSection(sectionId){
 
-    return fetch('http://localhost:4000/api/delete/'+sectionId, {
+    return fetch('https://enigmatic-basin-76680.herokuapp.com/api/delete/'+sectionId, {
       credentials: 'include', // include, same-origin, *omit
       method: 'delete',
       headers: {
@@ -165,7 +165,7 @@ export class UserServiceClient {
 
   findAllUsers()
   {
-    return fetch('http://localhost:4000/api/user',
+    return fetch('https://enigmatic-basin-76680.herokuapp.com/api/user',
       {
         credentials: 'include', // include, same-origin, *omit
       })

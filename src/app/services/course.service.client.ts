@@ -1,5 +1,5 @@
 export class CourseServiceClient {
-  COURSE_URL = 'http://localhost:8080/api/course';
+  COURSE_URL = 'https://webdev-summer1-2018-sinha-sou.herokuapp.com/api/course';
   findAllCourses() {
     return fetch(this.COURSE_URL)
       .then(response => response.json());
@@ -9,7 +9,7 @@ export class CourseServiceClient {
       .then(response => response.json());
   }
   findloggedInUser() {
-    return fetch('http://localhost:4000/api/profile',
+    return fetch('https://enigmatic-basin-76680.herokuapp.com/api/profile',
       {
         credentials: 'include', // include, same-origin, *omit
       })
