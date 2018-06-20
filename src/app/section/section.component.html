@@ -1,7 +1,7 @@
 
 <app-titlebar></app-titlebar>
 <div class="alert alert-info" role="alert">
-  <h3>Sections for {{course.title}}</h3>
+  <h3>Sections for </h3>
 </div>
 <div class="container-fluid">
 <div class="form-control" style="min-height: 833px">
@@ -32,7 +32,7 @@
 <div>
   <button
     class="btn btn-success"
-    (click)="addSection(course.title+'New Section')" [hidden]=!isAdmin>
+    (click)="addSection('New Section')" [hidden]=!isAdmin>
     Add Section
   </button>
 </div>
