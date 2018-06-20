@@ -15,6 +15,7 @@ export class EnrolledSectionComponent implements OnInit {
 
   user: User = new User();
   sections = [];
+  isLoggedIn;
   unenroll(id) {
 
     this.service.unenrollStudentInSection(id).then((response)=> {
@@ -32,6 +33,14 @@ export class EnrolledSectionComponent implements OnInit {
     this.service
       .profile()
       .then(user => this.user = user);
+
+    this.courseservice.findloggedInUser().then(user => {
+      this.user = user;
+      if(user.username != '')
+      {
+        this.isLoggedIn = true;
+      }
+    });
 
     this.service
       .findSectionsForStudent()

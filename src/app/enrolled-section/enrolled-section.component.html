@@ -1,4 +1,4 @@
-<div  *ngIf="!(user.username == 'admin')" class="form-control" style="min-height: 575px">
+<div [hidden]=!isLoggedIn *ngIf="!(user.username == 'admin')" class="form-control" style="min-height: 575px">
   <div class="alert alert-info" role="alert">
     <h3>Courses Registered</h3>
   </div>
