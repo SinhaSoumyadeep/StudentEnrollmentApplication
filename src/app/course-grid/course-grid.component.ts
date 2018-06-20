@@ -12,7 +12,7 @@ export class CourseGridComponent implements OnInit {
   constructor(private service: CourseServiceClient) { }
 
   courses: Course[] = [];
-  user: '';
+  user: {};
   isLoggedIn;
 
   ngOnInit() {
